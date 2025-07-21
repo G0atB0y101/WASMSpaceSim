@@ -1,0 +1,12 @@
+{
+  "name": "3dwebsite-demo",
+  "version": "1.0.0",
+  "description": "Minimal Three.js + WebAssembly + WebSocket demo",
+  "main": "server/websocket-server.js",
+  "scripts": {
+    "start:ws": "node server/websocket-server.js"
+  },
+  "dependencies": {
+    "ws": "^8.0.0"
+  }
+}

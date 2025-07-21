@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three.js + WebAssembly + WebSocket Demo</title>
+  <style>
+    body { margin: 0; background: #181818; color: #fff; font-family: sans-serif; }
+    #scene-container { width: 100vw; height: 60vh; display: block; }
+    #output { margin: 20px; padding: 10px; background: #222; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>3D + WebAssembly + WebSocket Demo</h1>
+  <div id="scene-container" style="width:1600px; height:900px; border: 0px; margin: 20px auto;"></div>
+  <button id="B_simulate">Start Simulation</button>
+  <input type="text", id="I_PositionX", placeholder="00">
+  <input type="text", id="I_PositionY", placeholder="00">
+  <input type="text", id="I_PositionZ", placeholder="00">
+  <button id="B_sendPositions">Add Body</button>
+  <div id="output">
+    <div>WASM: <span id="wasm-result">Loading...</span></div>
+    <div>WebSocket: <span id="ws-result">Connecting...</span></div>
+  </div>
+  <script src="three.min.js"></script>
+  <script src="wasm/logic.js"></script> <!-- FIX: Changed from hello.js to logic.js (loads the compiled WebAssembly module) -->
+  <script src="main.js"></script>
+</body>
+</html>
